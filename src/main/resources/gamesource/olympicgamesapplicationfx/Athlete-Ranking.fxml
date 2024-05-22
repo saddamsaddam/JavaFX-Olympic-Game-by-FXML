@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gamesource.olympicgamesapplicationfx.AthleteRankingController"
+            prefHeight="-1" prefWidth="-1" style="-fx-background-color: #CCCCCC;">
+    <HBox prefHeight="-1" prefWidth="-1" alignment="CENTER" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+        <VBox prefWidth="600" prefHeight="-1">
+            <HBox  alignment="CENTER" spacing="20">
+                <Button alignment="CENTER" text="Back" onAction="#handleBackButtonAction" prefHeight="20" prefWidth="-1">
+
+                </Button>
+                <Button alignment="CENTER" text="Export" onAction="#Export" prefHeight="20" prefWidth="-1">
+
+                </Button>
+                <padding>
+                    <Insets top="50"  bottom="20"/>
+                </padding>
+            </HBox>
+
+
+            <HBox spacing="20" alignment="CENTER" prefHeight="-1" prefWidth="600">
+
+                <!--        <Button alignment="CENTER" text="Back" onAction="#handleBackButtonAction" prefHeight="100" prefWidth="-1"/>-->
+                <TableView fx:id="rankingTable">
+                    <columns>
+                        <TableColumn fx:id="countryColumn" text="Country" />
+                        <TableColumn fx:id="athleteCountColumn" text="Athlete Count" />
+                        <TableColumn fx:id="medalCountColumn" text="Medal Count" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="athleteRankingTable">
+                    <columns>
+                        <TableColumn fx:id="athleteNameColumn" text="Athlete Name" />
+                        <TableColumn fx:id="countryColumn2" text="Country" />
+                        <TableColumn fx:id="medalCountColumn2" text="Medal Count" />
+                    </columns>
+                </TableView>
+
+
+            </HBox>
+
+
+        </VBox>
+    </HBox>
+
+
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gamesource.olympicgamesapplicationfx.AthleteDisciplineAssignment"
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CCCCCC;">
+
+        <VBox prefHeight="600.0" prefWidth="800.0" alignment="CENTER">
+            <GridPane alignment="CENTER" hgap="3" vgap="2" prefWidth="400.0" prefHeight="200.0">
+                <!-- ListViews for selecting an athlete, category, and discipline -->
+                <Label text="Select Athlete" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <ListView fx:id="athleteListView" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+                <Label text="Select Category" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <ListView fx:id="categoryListView" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Select Discipline" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <ListView fx:id="disciplineListView" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            </GridPane>
+
+            <GridPane alignment="CENTER" hgap="1" vgap="2" prefWidth="00.0" prefHeight="100.0">
+                <Button text="Submit" onAction="#handleSubmitButtonAction" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Button text="Back" onAction="#handleBackButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            </GridPane>
+
+            <Label fx:id="messageLabel"/>
+        </VBox>
+
+</AnchorPane>

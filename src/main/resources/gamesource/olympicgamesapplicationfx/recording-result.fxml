@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gamesource.olympicgamesapplicationfx.RecordingResultController"
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #CCCCCC;">
+    <VBox>
+        <padding>
+            <Insets top="50" bottom="20" left="200"/>
+        </padding>
+        <HBox alignment="CENTER">
+            <ImageView fx:id="circleImageView" fitHeight="100.0" fitWidth="100.0">
+                <Image url="/record.jpeg" />
+            </ImageView>
+        </HBox>
+        <!-- HBox for the label -->
+        <HBox alignment="CENTER">
+            <Label text="Recording Results" style="-fx-font-size: 32px;" />
+        </HBox>
+        <HBox  alignment="CENTER" spacing="80">
+            <padding>
+                <Insets top="50" bottom="20" left="10"/>
+            </padding>
+            <Button text="Recording of Result of Sports Events" onAction="#navigateToRecordingOfResult" prefWidth="250" style="-fx-background-color: lightblue;"/>
+            <Button text="Athlete and Country Performance Ranking" onAction="#navigateToAthleteAndCountryPerformanceRanking" prefWidth="250" style="-fx-background-color: lightgreen;"/>
+            <Button text="Back" onAction="#navigateToMenuController" prefWidth="250" style="-fx-background-color: gray;"/>
+        </HBox>
+        <VBox fx:id="navigationVBox2" alignment="CENTER" fillWidth="1000" spacing="20">
+
+<!--            Event_Name	Discipline	Athlete	Time	Score-->
+            <TableView fx:id="resultTableView" prefWidth="1000" prefHeight="400">
+                <columns>
+                    <TableColumn prefWidth="250" fx:id="resultEventName" text="Event Name" />
+                    <TableColumn prefWidth="250" fx:id="resultDiscipline" text="Discipline" />
+                    <TableColumn prefWidth="250" fx:id="resultAthleteName" text="Athlete Name" />
+                    <TableColumn prefWidth="150" fx:id="resultTime" text="Time" />
+                    <TableColumn prefWidth="100" fx:id="resultScore" text="Score" />
+                </columns>
+            </TableView>
+
+        </VBox>
+    </VBox>
+
+
+</AnchorPane>

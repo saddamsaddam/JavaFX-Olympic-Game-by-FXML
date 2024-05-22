@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gamesource.olympicgamesapplicationfx.MadelStandingController"
+            style="-fx-background-color: #CCCCCC;">
+    <HBox prefHeight="-1" prefWidth="800" alignment="CENTER" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+         <VBox alignment="CENTER">
+             <padding>
+                 <Insets top="50" bottom="20" />
+             </padding>
+             <Button alignment="CENTER" text="Back" onAction="#handleBackButtonAction" prefHeight="20" prefWidth="-1"/>
+                <HBox>
+                    <BarChart fx:id="barChart" layoutX="50.0" layoutY="50.0" prefHeight="300.0" prefWidth="500.0">
+                        <xAxis>
+                            <CategoryAxis fx:id="xAxis" side="BOTTOM"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT"/>
+                        </yAxis>
+                    </BarChart>
+                </HBox>
+                  <HBox>
+                    <BarChart fx:id="barChart2" layoutX="50.0" layoutY="50.0" prefHeight="300.0" prefWidth="500.0">
+                        <xAxis>
+                            <CategoryAxis fx:id="xAxis2" side="BOTTOM"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis fx:id="yAxis2" side="LEFT"/>
+                        </yAxis>
+                    </BarChart>
+
+
+                </HBox>
+
+         </VBox>
+    </HBox>
+
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gamesource.olympicgamesapplicationfx.CreateEventController"
+            prefHeight="-1" prefWidth="-1" style="-fx-background-color: #CCCCCC;">
+    <HBox prefHeight="-1" prefWidth="-1" alignment="CENTER" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+
+        <VBox alignment="CENTER" spacing="10" prefWidth="600.0" prefHeight="400.0">
+
+            <GridPane alignment="CENTER" hgap="2" vgap="2" prefWidth="600.0" prefHeight="200.0">
+                <!-- ListViews for selecting an athlete, category, and discipline -->
+
+                <Label text="Select Category" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <ListView fx:id="categoryListView" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+                <Label text="Select Discipline" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <ListView fx:id="disciplineListView" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </GridPane>
+
+
+
+
+            <Label text="Create New Event" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+
+            <GridPane alignment="CENTER" hgap="10" vgap="5">
+                <!-- Remove ColumnConstraints and RowConstraints from here -->
+
+                <Label text="Event Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="eventNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Event Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <DatePicker fx:id="eventDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="locationTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextArea fx:id="descriptionTextArea" GridPane.columnIndex="1" GridPane.rowIndex="3" prefHeight="100" />
+            </GridPane>
+
+            <GridPane alignment="CENTER" hgap="1" vgap="2">
+                <Button GridPane.columnIndex="0" GridPane.rowIndex="0" text="Create Event" onAction="#handleCreateEventButtonAction" />
+                <Button GridPane.columnIndex="1" GridPane.rowIndex="0" text="Back" onAction="#handleBackButtonAction"/>
+            </GridPane>
+
+            <Label fx:id="messageLabel"/>
+
+        </VBox>
+    </HBox>
+
+</AnchorPane>

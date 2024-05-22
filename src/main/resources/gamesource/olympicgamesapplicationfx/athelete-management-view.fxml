@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gamesource.olympicgamesapplicationfx.AtheleteManagementViewController"
+            style="-fx-background-color: #CCCCCC;">
+    <VBox>
+        <padding>
+            <Insets top="50" bottom="20" left="200"/>
+        </padding>
+        <HBox alignment="CENTER">
+            <ImageView fx:id="circleImageView" fitHeight="100.0" fitWidth="100.0">
+                <Image url="/athlet.jpeg" />
+            </ImageView>
+        </HBox>
+        <!-- HBox for the label -->
+        <HBox alignment="CENTER">
+            <Label text="Athlete Management" style="-fx-font-size: 32px;" />
+        </HBox>
+        <HBox  alignment="CENTER" spacing="80">
+            <padding>
+                <Insets top="50" bottom="20" left="10"/>
+            </padding>
+            <Button text="Athlete Registration" onAction="#navigateToRegController" prefWidth="200" style="-fx-background-color: lightblue;"/>
+            <Button text="Modify Athelete Information" onAction="#navigateToModifyController" prefWidth="200" style="-fx-background-color: lightgreen;"/>
+            <Button text="Back" onAction="#navigateToMenuController" prefWidth="200" style="-fx-background-color: orange;"/>
+        </HBox>
+
+        <VBox fx:id="navigationVBox2" alignment="CENTER" fillWidth="1000" spacing="20">
+
+<!--            <ListView fx:id="EventsListView" GridPane.columnSpan="3" GridPane.columnIndex="0" GridPane.rowIndex="1" prefHeight="350.0" prefWidth="700.0"/>-->
+            <TableView fx:id="AthleteTableView" prefWidth="1000" prefHeight="400">
+                <columns>
+                    <TableColumn prefWidth="250" fx:id="athleteName" text="Name" />
+                    <TableColumn prefWidth="250" fx:id="athleteCountry" text="Country" />
+                    <TableColumn prefWidth="100" fx:id="athleteAge" text="Age" />
+                    <TableColumn prefWidth="100" fx:id="athleteGender" text="Gender" />
+                    <TableColumn prefWidth="300" fx:id="athleteEmail" text="Email" />
+                </columns>
+            </TableView>
+
+        </VBox>
+
+
+    </VBox>
+
+
+
+</AnchorPane>

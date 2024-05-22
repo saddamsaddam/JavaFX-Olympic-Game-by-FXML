@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gamesource.olympicgamesapplicationfx.MenuController"
+            prefHeight="-1" prefWidth="-1" style="-fx-background-color: white;">
+
+    <!-- Center the HBox horizontally and vertically within the AnchorPane -->
+    <VBox  alignment="CENTER" prefHeight="-1" prefWidth="-1">
+        <padding>
+            <Insets top="10" bottom="20" left="50"/>
+        </padding>
+        <!-- HBox for the circle image -->
+        <HBox alignment="CENTER">
+            <ImageView fx:id="circleImageView" fitHeight="200.0" fitWidth="200.0">
+                <Image url="/logo2.png" />
+            </ImageView>
+        </HBox>
+        <!-- HBox for the label -->
+        <HBox alignment="CENTER">
+            <Label alignment="CENTER" text="Welcome To Olympic Game in Paris 2024" style="-fx-font-size: 32px;" />
+        </HBox>
+        <HBox   spacing="40" alignment="CENTER" >
+            <padding>
+                <Insets left="50" bottom="20" top="50"/>
+            </padding>
+            <Button text="Athlete Management" onAction="#navigateToAthleteManagement" prefWidth="200" style="-fx-background-color: lightblue;"/>
+            <Button text="Sports Discipline Management" onAction="#navigateToDisciplineManagement" prefWidth="200" style="-fx-background-color: lightgreen;"/>
+            <Button text="Event Management" onAction="#navigateToEventManagement" prefWidth="200"  style="-fx-background-color: gray;"/>
+            <Button text="Recording Results" onAction="#navigateToRecordingResults" prefWidth="200" style="-fx-background-color: orange;"/>
+            <Button text="Madel Standing Analysis" onAction="#navigateToMadelStanding" prefWidth="200" style="-fx-background-color: pink;"/>
+
+
+        </HBox>
+        <!-- VBox on the right side -->
+        <!-- VBox for additional navigation and event details -->
+        <VBox fx:id="navigationVBox2" alignment="CENTER" fillWidth="1000" spacing="20">
+            <GridPane alignment="CENTER" hgap="10" vgap="10" prefWidth="800.0">
+                <!-- Labels and controls for event details -->
+                <Label text="Events" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <DatePicker fx:id="eventDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+
+            </GridPane>
+            <ListView fx:id="EventsListView" GridPane.columnSpan="3" GridPane.columnIndex="0" GridPane.rowIndex="1" prefHeight="350.0" prefWidth="700.0"/>
+        </VBox>
+
+    </VBox>
+
+
+</AnchorPane>
